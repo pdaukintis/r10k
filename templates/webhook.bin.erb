@@ -29,7 +29,7 @@ else
 end
 
 ENV['HOME'] = '/var/lib/<%= @user %>'
-ENV['PATH'] = '<%= scope['::path'] %>'
+ENV['PATH'] = '<%= scope['::path'] %>:<%= if @is_pe == true or @is_pe == 'true' then '/opt/puppet/bin' else '/usr/local/bin' end %>'
 
 $logger = WEBrick::Log::new($config['access_logfile'], WEBrick::Log::DEBUG)
 
