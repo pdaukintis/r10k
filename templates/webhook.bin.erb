@@ -64,6 +64,7 @@ $command_prefix = $config['command_prefix'] || ''
 class Server < Sinatra::Base
 
   set :static, false
+  set :lock,   true
 
   get '/' do
     raise Sinatra::NotFound
