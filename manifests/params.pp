@@ -31,6 +31,7 @@ class r10k::params
   $webhook_port                  = '8088'
   $webhook_access_logfile        = '/var/log/webhook/access.log'
   $webhook_certname              = 'peadmin'
+  $webhook_enable_mutex_lock     = false
   $webhook_certpath              = '/var/lib/peadmin/.mcollective.d'
   $webhook_client_cfg            = '/var/lib/peadmin/.mcollective'
   $webhook_use_mco_ruby          = false

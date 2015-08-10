@@ -9,6 +9,7 @@ class r10k::webhook::config (
   $hash                  = 'UNSET',
   $certname              = $r10k::params::webhook_certname,
   $certpath              = $r10k::params::webhook_certpath,
+  $enable_mutex_lock     = $r10k::params::webhook_enable_mutex_lock,
   $user                  = $r10k::params::webhook_user,
   $pass                  = $r10k::params::webhook_pass,
   $bind_address          = $r10k::params::webhook_bind_address,
@@ -56,6 +57,7 @@ class r10k::webhook::config (
       'public_key_path'       => $public_key_path,
       'private_key_path'      => $private_key_path,
       'command_prefix'        => $command_prefix,
+      'enable_mutex_lock'     => $enable_mutex_lock,
     }
   } else {
     validate_hash($hash)
